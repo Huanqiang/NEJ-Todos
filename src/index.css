@@ -1,0 +1,72 @@
+.app {
+  min-width: 200px;
+  width: 400px;
+  margin: 0 auto;
+  color: #4d4d4d;
+  font-size: 14px;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 200;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.app-main {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
+.input-wrapper {
+  padding: 8px;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.toggle-all {
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: #4d4d4d;
+}
+
+.add-todo {
+  width: calc(100% - 50px);
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-weight: 200;  
+}
+
+.todos-view {
+  padding:0; 
+  margin:0;
+}
+
+.operation {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.operation .select {
+  border-width: 1px;
+  border-color: rgba(175, 47, 47, 0.5);
+  border-style: solid;
+}
+
+.app-info {
+  color: #bfbfbf;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+}
+
+.app-info > p {
+  line-height: 1em;
+}
+
+.app-info a {
+  color: #4d4d4d;
+  text-decoration: none;
+}

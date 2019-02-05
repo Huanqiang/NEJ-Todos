@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <style>
+    button {
+      border: none;
+      outline: none;
+      background-color: white;
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <link href="./index.css" rel="stylesheet" type="text/css" />
+  <title>Todos</title>
+</head>
+
+<body>
+  <div id="app" class="app">
+    <header class="app-title"><span>Todos</span></header>
+    <section class="app-main">
+      <header class="input-wrapper">
+        <button class="toggle-all">></button>
+        <input class="add-todo" type="text" id="input" placeholder="请输入新的Todo..." />
+      </header>
+      <ul class="todos-view" id="todos-view">
+
+      </ul>
+      <footer class="operation">
+        <div><span id="todos-count" class="todos-count"></span> items</div>
+        <div>
+          <button class="filter select">All</button>
+          <button class="filter">Active</button>
+          <button class="filter">Completed</button>
+        </div>
+        <div><button class="clear">Clear completed</button></div>
+      </footer>
+    </section>
+    <footer class="app-info">
+      <p>Double click to edit a todo</p>
+      <p>Written By <a href="#">Huan qiang</a></p>
+      <p>Part of <a href="#">TodoMVC</a></p>
+    </footer>
+  </div>
+
+  <script src="http://nej.netease.com/nej2/src/define.js"></script>
+  <script src="./index.js"></script>
+  <!-- <script>
+    NEJ.define([
+      'util/dispatcher/dispatcher'
+    ], function (_e) {
+      _e._$startup({
+        // 规则配置
+        rules: {
+          rewrite: {
+            // 重写规则配置
+            "/": '/todos'
+          },
+          title: {
+            // 标题配置
+            '/todos': '全部',
+            '/todos/completed': '完成',
+            '/todos/active': '未完成'
+          },
+          alias: {
+            // 别名配置
+            // 建议模块实现文件中的注册采用这里配置的别名
+          }
+        },
+        // 模块配置
+        modules: {
+          // 模块UMI对应实现文件的映射表
+          // 同时完成模块的组合
+        }
+      });
+    })
+  </script> -->
+</body>
+
+</html>

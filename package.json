@@ -1,0 +1,14 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "description": "## 功能",
+  "main": "index.js",
+  "dependencies": {
+    "serve": "^10.1.1"
+  },
+  "scripts": {
+    "start": "serve src -p 8080"
+  },
+  "author": "Huanqiang",
+  "license": "ISC"
+}
