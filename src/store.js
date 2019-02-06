@@ -68,6 +68,27 @@ NEJ.define(['./api.js'], function(_api, _p) {
     })
   }
 
+  _p._$updateTodoLabel = function(id, label) {
+    const beforeTodo = todos.find(todo => todo.id === id)
+    const updatedTodo = {
+      ...beforeTodo,
+      label
+    }
+
+    _api._$updateById(id, updatedTodo, {
+      onSuccess: function(data) {
+        todos = todos.map(todo => {
+          return id === todo.id ? updatedTodo : todo
+        })
+        // 执行更新后，手动触发更新，本操作应该放在父组件中的
+        _p.__dispatchUpdate()
+      },
+      onError: function(error) {
+        console.log(error)
+      }
+    })
+  }
+
   _p._$deleteTodo = function(id) {
     _api._$deleteById(id, {
       onSuccess: function(data) {
