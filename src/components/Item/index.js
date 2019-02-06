@@ -50,7 +50,7 @@ NEJ.define([
     console.log('_doRefresh', _todo)
     this.__todo = _todo
     this.__label.innerHTML = _todo.label
-    this.__checked.checked = _todo.completed
+    this.__checked.checked = _todo.isCompleted
   }
 
   // 销毁操作

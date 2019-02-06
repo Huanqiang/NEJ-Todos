@@ -98,7 +98,10 @@ NEJ.define([
 
   _pro.__init = function () {
     // 创建组件
-    _pro.__refresh(_store._$getAllTodos())
+    // _store._$getAllTodos(function (todos) {
+    //   _pro.__refresh(todos)
+    // })
+    // _pro.__refresh(_store._$getAllTodos())
     _pro.__filter_state = 'all'
     _event._$addEvent(__toggle_all, 'click', _pro.__toggleAllTodos);
     _event._$addEvent(__input, 'keydown', _pro.__addNewTodo);
