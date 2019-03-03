@@ -13,7 +13,6 @@ export default (sequelize, DataType) => {
           isDeleted: false
         }
       },
-      // timestamps: false,
       charset: 'utf8',
       freezeTableName: true,
       underscored: true,
