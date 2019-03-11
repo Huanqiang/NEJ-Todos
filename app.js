@@ -1,14 +1,16 @@
 import Koa from 'koa'
-const cors = require('@koa/cors');
-import KoaLogger from 'koa-logger'
+import serve from 'koa-static'
+import cors from '@koa/cors'
+// const serve = require('koa-static');
+// const cors = require('@koa/cors');
 import KoaBodyparser from 'koa-bodyparser'
-
-import router from './router'
-import database from './database'
+import router from './server/router'
+import database from './server/database'
 
 let app = new Koa()
 
-app.use(KoaLogger())
+
+app.use(serve(__dirname + '/src'))
 app.use(cors());
 app.use(KoaBodyparser())
 
@@ -16,6 +18,7 @@ app.use(KoaBodyparser())
 app.use(router.routes()).use(router.allowedMethods())
 
 app.listen(3000, () => {
+  console.log(__dirname)
   console.log(`已经开启服务，端口：${3000}`)
 })
 

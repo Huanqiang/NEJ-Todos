@@ -14,13 +14,12 @@
     "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "mysql2": "^1.6.4",
-    "sequelize": "^4.42.0",
-    "serve": "^10.1.1"
+    "sequelize": "^4.42.0"
   },
   "scripts": {
-    "start": "serve src -p 8080",
-    "dev": "nodemon ./server/index.js"
+    "start": "node ./index.js"
   },
   "author": "Huanqiang",
   "license": "ISC"

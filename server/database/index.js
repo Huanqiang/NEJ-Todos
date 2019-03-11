@@ -28,14 +28,6 @@ fs.readdirSync(modelspath).filter(file => (file.slice(-3) === '.js')).forEach(fi
   db[model.name] = model
 })
 
-// // 我也不知道有什么用，有没有都可以
-// Object.keys(db).forEach(modelName => {
-//   if (db[modelName].associate) {
-//     db[modelName].associate(db)
-//   }
-// })
-
 db.sequelize = sequelize
-// db.Sequelize = Sequelize
 
 export default db
